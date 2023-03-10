@@ -2,3 +2,10 @@ body {
   width: 100wh;
   background: #887787;
 }
+
+.first-mem {
+  width: 200px;
+  height: 200px;
+  background: url("./assets/1.jpg");
+  background-size: cover;
+}
