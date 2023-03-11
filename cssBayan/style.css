@@ -1,64 +1,115 @@
 body {
   width: 100vw;
   height: 100vh;
-  background: #887787;
+  background-color: aliceblue;
 }
 
 .container {
-width: 100%;
-height: 100%;
-padding: 40px 70px;
-display: flex;
-flex-direction: column;
-align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 40px 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
 }
 
-.first-main {
+.card {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-first {
+  /* height: 50%; */
+}
+
+input {
+  width: 0;
+  height: 0;
+  appearance: none;
+}
+
+input:checked + .mem {
+  display: flex;
+}
+
+/* #second:checked + .mem {
+  display: flex;
+}
+
+#third:checked + .mem {
+  display: flex;
+}
+
+#fourth:checked + .mem {
+  display: flex;
+} */
+
+.main-text {
+  width: 100%;
+  padding: 2%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  font-size: 4em;
+  border: 2px solid #9518d4;
+  transition: background-color 1s;
 }
 
-.first-icon {
+.main-text:hover {
+  background-color: #9518d4;
+}
+
+label {
+  width: 100%;
+  height: 100%;
+}
+
+.eye-icon {
   width: 20px;
   height: 20px;
   background: url("./assets/eye.svg") no-repeat;
+  /* transition: transform .35s;
+  transform: rotate(90deg); */
 }
 
 .mem {
   width: 100%;
-  height: 20%;
-  display: flex;
+  /* height: 20%; */
+  display: none;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
+  transition: color 0.5s, padding 0.5s;
+  overflow: hidden;
 }
 
 .first-mem {
-  width: 200px;
-  height: 200px;
+  width: 60%;
+  aspect-ratio: 41/40;
   background: url("./assets/1.jpg");
   background-size: cover;
 }
 
 .second-mem {
-  width: 200px;
-  height: 200px;
+  width: 60%;
+  aspect-ratio: 41/40;
   background: url("./assets/2.jpg");
   background-size: cover;
 }
 
 .third-mem {
-  width: 200px;
-  height: 200px;
+  width: 60%;
+  aspect-ratio: 41/40;
   background: url("./assets/3.png");
   background-size: cover;
 }
 
 .fourth-mem {
-  width: 200px;
-  height: 200px;
+  width: 60%;
+  aspect-ratio: 41/40;
   background: url("./assets/4.jpg");
   background-size: cover;
 }
