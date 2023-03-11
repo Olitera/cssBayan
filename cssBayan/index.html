@@ -6,58 +6,67 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <link class="flav" rel="icon" href="">
+  <link class="flav" rel="icon" href="./assets/eye.svg">
   <title>cssBayan</title>
 </head>
 
 <body>
   <div class="container">
-    <h1>CSS Bayan</h1>
+    <div class="container-inner">
+      <h1>CSS Bayan</h1>
 
-    <div class="card card-first">
-      <div class="main-text">
-        <label for="first">When I was going to the Stage 1, I had a goal</label>
-        <div class="eye-icon"></div>
+      <div class="card">
+        <input type="radio" name="group" id="first" checked="checked">
+        <label for="first">
+          <div class="main-text">
+            When I was going to the Stage 1, I had a goal
+            <div class="eye-icon"></div>
+          </div>
+          <div class="mem">
+            <div class="first-mem"></div>
+          </div>
+        </label>
       </div>
-      <input type="checkbox" id="first" checked="checked">
-      <div class="mem">
-        <div class="first-mem"></div>
+
+      <div class="card">
+        <input type="radio" name="group" id="second">
+        <label for="second">
+          <div class="main-text">
+            I even found the photo for CV
+            <div class="eye-icon"></div>
+          </div>
+          <div class="mem">
+            <div class="second-mem"></div>
+          </div>
+        </label>
+      </div>
+
+      <div class="card">
+        <input type="radio" name="group" id="third">
+        <label for="third">
+          <div class="main-text">
+            I mastered the subtle science of codewars
+            <div class="eye-icon"></div>
+          </div>
+          <div class="mem">
+            <div class="third-mem"></div>
+          </div>
+        </label>
+      </div>
+
+      <div class="card">
+        <input type="radio" name="group" id="fourth">
+        <label for="fourth">
+          <div class="main-text">
+            But every morning...
+            <div class="eye-icon"></div>
+          </div>
+          <div class="mem">
+            <div class="fourth-mem"></div>
+          </div>
+        </label>
       </div>
     </div>
-
-    <div class="card">
-      <div class="main-text">
-        <label for="second">I even found the photo for CV</label>
-        <div class="eye-icon"></div>
-      </div>
-      <input type="checkbox" id="second">
-      <div class="mem">
-        <div class="second-mem"></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="main-text">
-        <label for="third">I mastered the subtle science of codewars</label>
-        <div class="eye-icon"></div>
-      </div>
-      <input type="checkbox" id="third">
-      <div class="mem">
-        <div class="third-mem"></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="main-text">
-        <label for="fourth">But every morning...</label>
-        <div class="eye-icon"></div>
-      </div>
-      <input type="checkbox" id="fourth">
-      <div class="mem">
-        <div class="fourth-mem"></div>
-      </div>
-    </div>
-
   </div>
 </body>
 
