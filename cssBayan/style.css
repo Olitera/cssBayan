@@ -5,8 +5,6 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
   background-color: rgb(210, 214, 217);
   scroll-behavior: smooth;
 }
@@ -39,8 +37,12 @@ h1 {
   cursor: pointer;
 }
 
-.card:active .main-text {
-  color: rgb(139, 60, 229);
+.card:active .main-text.main-text.main-text  {
+  color: #FFFFFF;
+}
+
+.card:active .eye-icon.eye-icon {
+  filter: invert(100%) sepia(2%) saturate(701%) hue-rotate(259deg) brightness(117%) contrast(100%);
 }
 
 input {
@@ -49,24 +51,21 @@ input {
   appearance: none;
 }
 
-/* input:checked + .mem {
-  display: flex;
-} */
-
 input:checked + label .mem div {
   width: 60%;
 }
 
 input:checked + label .main-text {
-  color: rgb(139, 60, 229)
+  color: #9b8724;
 }
 
-input:checked ~ div {
-  color: blue;
+input:checked + label .eye-icon {
+  transform: rotate(180deg);
+  background-image: url("./assets/eyeSlash.svg");
+  filter: invert(51%) sepia(34%) saturate(875%) hue-rotate(13deg) brightness(95%) contrast(87%);
 }
 
 .main-text {
-  /* width: 100%; */
   padding: 2%;
   display: flex;
   flex-direction: row;
@@ -77,7 +76,7 @@ input:checked ~ div {
   font-size: 4em;
   color: #000000;
   opacity: 0.8;
-  border: 2px solid #73cb8d;
+  border: 2px solid #3e4340;
   transition: background-color 0.5s linear;
 }
 
@@ -88,22 +87,15 @@ label {
 }
 
 .eye-icon {
-  width: 0.7em;
+  min-width: 0.7em;
   height: 0.7em;
   background: url("./assets/eye.svg") no-repeat;
   display: none;
-  /* transition: transform .35s;
-  transform: rotate(90deg); */
-}
-
-input:checked + .eye-icon {
-  background: url("./assets/eyeSlash.svg");
+  transition: 0.2s ease-in-out;
 }
 
 .mem {
   width: 100%;
-  /* height: 20%; */
-  /* display: none; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -148,6 +140,10 @@ input:checked + .eye-icon {
   .main-text {
     font-size: 2em;
   }
+
+  .eye-icon {
+    display: block;
+  }
 }
 
 @media (max-width: 320px){
@@ -162,7 +158,11 @@ input:checked + .eye-icon {
 @media(any-hover: hover) {
   .container-inner:hover .eye-icon {
     display: block;
-    transition: 0.2s ease-in-out;
+    filter: invert(51%) sepia(34%) saturate(875%) hue-rotate(13deg) brightness(95%) contrast(87%);
+  }
+
+  .container-inner:hover label .main-text {
+    color: #9b8724;
   }
  
   .card:hover .mem div {
@@ -170,18 +170,14 @@ input:checked + .eye-icon {
   }
 
   .card:hover .eye-icon {
+    transform: rotate(180deg);
     background-image: url("./assets/eyeSlash.svg");
   }
 
-
-
-
   .main-text:hover {
-    background-color: #73cb8d;
+    background-color: #3e4340;
     transition: background-color 0.2s linear;
   }
-  
-
 }
 
 
