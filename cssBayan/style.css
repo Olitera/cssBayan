@@ -76,7 +76,7 @@ input:checked + label .eye-icon {
   font-size: 4em;
   color: #000000;
   opacity: 0.8;
-  border: 2px solid #3e4340;
+  border: solid #3e4340;
   transition: background-color 0.5s linear;
 }
 
